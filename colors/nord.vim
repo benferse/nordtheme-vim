@@ -173,6 +173,11 @@ if has('nvim')
   let g:terminal_color_14 = s:nord7_gui
   let g:terminal_color_15 = s:nord6_gui
 
+  " benferse: Newer versions of neovim have different highlight groups for base content
+  " in floating and non-floating windows. The floating window defaults are different than
+  " non-floating windows, but I'm too used to them being the same, so put em back :)
+  hi! link NormalFloat Normal
+
   "+- Neovim Support -+
   call s:hi("healthError", s:nord11_gui, s:nord1_gui, s:nord11_term, s:nord1_term, "", "")
   call s:hi("healthSuccess", s:nord14_gui, s:nord1_gui, s:nord14_term, s:nord1_term, "", "")
